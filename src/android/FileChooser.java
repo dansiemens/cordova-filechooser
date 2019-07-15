@@ -122,8 +122,7 @@ public class FileChooser extends CordovaPlugin {
                             this.callback.success(resultObj);
                         }
                     } catch(Exception e){
-                        resultObj.put("uri", uri.toString());
-                        this.callback.success(resultObj);
+                        this.callback.success("\"uri\": \"" + uri.toString() + "\"");
                     } 
                 } else {
                     callback.error("File uri was null");
